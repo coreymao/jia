@@ -1,0 +1,788 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0 none;
+    vertical-align: top;
+    display: inline-block;
+}
+
+button {
+    cursor: pointer;
+    border: 0 none;
+}
+
+input {
+    border: 0 none;
+    background: transparent;
+}
+
+textarea {
+    resize: none;
+    border: 0 none;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+i, em, cite {
+    font-style: normal;
+}
+
+.fixed:after {
+    clear: both;
+    content: '.';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.fixed {
+    zoom: 1;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a, input, textarea, p, span, em, li, div, img, select {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    outline: none;
+    font-weight: normal;
+    font-family: "微软雅黑";
+    font-size: 24px;
+}
+
+body {
+    background: url(../img/bg.jpg) repeat-y center center;
+    font-size: 24px;
+    font-family: "微软雅黑";
+    color: #444;
+}
+
+.main {
+    width: 640px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.mainBox {
+    background: #fff;
+    color: #434343;
+    margin: 0 20px;
+    position: relative;
+}
+
+.mainBox:after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    background: url(../img/bottom.png) no-repeat center center;
+}
+
+.mainBox .title {
+    padding: 40px 0 20px;
+    position: relative;
+    line-height: 60px;
+    margin: 0 40px;
+}
+
+.mainBox .title .btn {
+    height: 60px;
+    line-height: 60px;
+    width: auto;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 0 20px;
+}
+
+.btn {
+    display: block;
+    width: 330px;
+    height: 74px;
+    line-height: 74px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    background: #bf3030;
+    border-radius: 37px;
+    margin: 0 auto;
+}
+
+.btn2 {
+    background: #009a4b;
+}
+
+/*个人中心*/
+.mySpace .top {
+    text-align: center;
+    color: #434343;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+}
+
+.mySpace .top .img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px;
+    position: relative;
+    margin: 0 auto 30px;
+}
+
+.mySpace .top .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.mySpace .top .img b {
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 110px;
+    font-size: 22px;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    color: #fd8b14;
+    border-radius: 8px;
+    padding: 0 15px 0 35px;
+    text-transform: uppercase;
+}
+
+.mySpace .top .name {
+    font-size: 30px;
+    padding: 15px 0 20px;
+}
+
+.mySpace .top .jifen {
+    display: inline-block;
+    border: 1px solid #fff;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    min-width: 360px;
+    border-radius: 30px;
+}
+
+.mySpace .menu li {
+    width: 50%;
+    float: left;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+}
+
+.mySpace .menu li a {
+    display: block;
+    color: #434343;
+    padding: 45px 0 40px;
+    border-right: 1px solid #d9d9d9;
+}
+
+.mySpace .menu li:nth-child(even) a {
+    border-right: 0 none;
+}
+
+.mySpace .menu li i {
+    width: 60px;
+    height: 60px;
+    background: url(../img/menuIcos.png) no-repeat;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.mySpace .menu li i.m1 {
+    background-position: 0 0;
+}
+
+.mySpace .menu li i.m2 {
+    background-position: 0 -60px;
+}
+
+.mySpace .menu li i.m3 {
+    background-position: 0 -120px;
+}
+
+.mySpace .menu li i.m4 {
+    background-position: 0 -180px;
+}
+
+.mySpace .bottom {
+    text-align: center;
+    padding: 55px 0 40px;
+}
+
+/*个人资料*/
+.myInfo {
+    padding: 30px 0;
+}
+
+.myInfo li {
+    border: 2px solid #ababab;
+    font-size: 0;
+    color: #585858;
+    width: 520px;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.myInfo li label {
+    display: inline-block;
+    padding-left: 25px;
+    font-size: 28px;
+    line-height: 68px;
+    vertical-align: top;
+}
+
+.myInfo li input {
+    height: 68px;
+    line-height: 68px;
+    line-height: 30px;
+    width: 405px;
+    font-size: 28px;
+}
+
+.myInfo li textarea {
+    width: 405px;
+    height: 150px;
+    font-size: 28px;
+    padding: 17px 0;
+}
+
+.myInfo li select {
+    height: 68px;
+    line-height: 68px;
+    width: 405px;
+    font-size: 28px;
+    border: 0 none;
+    appearance: none;
+    -webkit-appearance: none;
+    background: url(../img/arrow.png) no-repeat right center;
+}
+
+.myInfo .btn {
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.sex {
+    display: inline-block;
+
+}
+
+.sex em {
+    display: inline-block;
+    height: 68px;
+    line-height: 68px;
+    font-size: 28px;
+    background: url(../img/check.png) no-repeat 0 -68px;
+    padding-left: 60px;
+    margin-right: 60px;
+    margin-left: 10px;
+}
+
+.sex em.on {
+    background-position: 0 0;
+}
+
+.mySpace .tk {
+    padding-left: 40px;
+    line-height: 50px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.mySpace .tk a {
+    color: #bf3030;
+    text-decoration: underline;
+}
+
+.mySpace .tk .check {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+    background: url(../img/check2.png) no-repeat center -77px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.mySpace .tk .check.on {
+    background-position: center -9px;
+}
+
+.mySpace {
+    padding: 100px 0 50px;
+}
+
+.register {
+    padding-top: 180px;
+}
+
+.myInfo.info li {
+    font-size: 24px;
+    padding: 10px 0;
+    border: 0 none;
+}
+
+/*details*/
+.details {
+    padding: 20px 40px;
+}
+
+.details li {
+    padding: 10px 0 10px 30px;
+    position: relative;
+    border-left: 1px solid #ddd;
+}
+
+.details ul {
+    padding-left: 20px;
+}
+
+.details li:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #bf3030;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: -10px;
+}
+
+/*pop*/
+.pop {
+    width: 640px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -320px;
+    background: rgba(0, 0, 0, .8);
+    z-index: 99;
+    display: none;
+}
+
+.pop .kuang .foot {
+    background-position: 0 -120px;
+}
+
+.pop .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.pop .box .con {
+    padding: 0 0 20px;
+}
+
+.pop .text {
+    margin: 30px 0;
+    color: #4b4b4b;
+    text-align: center;
+    line-height: 35px;
+}
+
+.pop .text i {
+    color: #ff9527;
+}
+
+.pop .btn {
+    margin-top: 30px;
+}
+
+.pop .ico {
+    width: 84px;
+    height: 84px;
+    display: block;
+    margin: 0 auto;
+    background: url(../img/icos.png) no-repeat 0 0;
+}
+
+.pop .ico.suc {
+    background-position: 0 0;
+}
+
+.pop .ico.fail {
+    background-position: 0 -84px;
+}
+
+.tanchu .box {
+    width: 560px;
+    padding: 30px 0;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    color: #4b4b4b;
+}
+
+.tanchu .box h3 {
+    color: #bf3030;
+    margin: 20px 0;
+    font-size: 52px;
+}
+
+.tanchu .box h4 {
+    color: #4b4b4b;
+    font-size: 40px;
+}
+
+.tanchu .box i {
+    color: #ff9527;
+}
+
+/**/
+.tableBox {
+    padding: 0 40px 10px;
+}
+
+.tableBox table {
+    width: 100%;
+}
+
+.tableBox table th {
+    text-align: left;
+    border-bottom: 2px solid #eee;
+}
+
+.tableBox table th, .tableBox table td {
+    padding: 20px 0 20px 10px;
+}
+
+.tableBox table th:first-child, .tableBox table td:first-child {
+    padding-left: 0;
+}
+
+.tableBox table td {
+    border-bottom: 1px solid #eee;
+}
+
+.tableBox table a {
+    display: inline-block;
+    padding: 5px;
+    color: #bf3030;
+}
+
+.tableBox table th:last-child, .tableBox table td:last-child {
+    text-align: right;
+}
+
+/*cue*/
+#cue {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+}
+
+#cue span {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    line-height: 40px;
+    padding: 20px 30px;
+    min-width: 240px;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+
+/*弹出框*/
+#popup {
+    background: rgba(0, 0, 0, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+#popup .popBox {
+    width: 420px;
+    padding: 60px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#popup .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#popup .text {
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+
+#popup .btns {
+    font-size: 0;
+}
+
+#popup .btns a {
+    font-size: 24px;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    background: #bf3030;
+    color: #fff;
+    padding: 0 30px;
+    border-radius: 10px;
+    margin: 0 6px;
+}
+
+#popup .btns a.cancel {
+    color: #424242;
+    background: #e8e8e8;
+}
+
+.addPop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0, 0, 0, .8);
+    display: none;
+}
+
+.addPop .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 420px;
+    padding: 60px 30px;
+    border-radius: 20px;
+}
+
+.addPop .tit {
+    text-align: center;
+    font-size: 30px;
+}
+
+.addPop .con {
+    padding: 30px 0;
+}
+
+.addPop textarea {
+    width: 360px;
+    height: 150px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
+}
+
+.addPop .close {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/close.png) no-repeat center center #bf3030;
+    background-size: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*baodan*/
+.baodan {
+    position: fixed;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 50px 0;
+}
+
+.baodan:after {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    background: url(../img/bottom.png) no-repeat center center;
+}
+
+.baodan:before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -18px;
+    left: 0;
+    background: url(../img/bottom.png) no-repeat center center;
+    -webkit-transform: scale(-1);
+    transform: scale(-1);
+}
+
+.baodan h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.baodan .btn {
+    display: block;
+    margin: 0 auto 50px;
+}
+
+.baodan p {
+    text-align: center;
+}
+
+.baodan p a {
+    color: #bf3030;
+}
+
+.choosePop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    display: none;
+}
+
+.choosePop .box {
+    position: absolute;
+    width: 540px;
+    top: 40px;
+    bottom: 40px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background: #fff;
+    padding: 20px;
+}
+
+.choosePop .tit {
+    text-align: center;
+}
+
+.choosePop .tit h2 {
+    margin-bottom: 20px;
+}
+
+.choosePop .searchBar {
+    font-size: 0;
+}
+
+.choosePop .searchBar input {
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    font-size: 24px;
+    vertical-align: top;
+    width: 400px;
+}
+
+.choosePop .searchBar button {
+    display: inline-block;
+    height: 52px;
+    line-height: 52px;
+    border: 0 none;
+    font-size: 24px;
+    vertical-align: top;
+    background: #bf3030;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+}
+
+.choosePop .list {
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 20px 0;
+}
+
+.choosePop .list li {
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 20px auto;
+}
+
+.choosePop .list li:first-child {
+    margin: 0;
+}
+
+.choosePop .list li.active {
+    background: #bf3030;
+    color: #fff;
+}
+
+.choosePop .close {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: url(../img/close.png) no-repeat center center #bf3030;
+    background-size: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    text-align: center;
+    color: #fff;
+    line-height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+}

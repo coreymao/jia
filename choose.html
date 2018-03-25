@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>家居</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="baodan">
+	<h2>报单</h2>
+	<a href="addOrder.html" class="btn">添加客户</a>
+    <a href="javascript:void(0)" class="btn choose">选择客户</a>
+    <p>
+    <a href="orders.html">历史报单>></a>
+    </p>
+</div>
+<div class="choosePop">
+	<div class="box">
+    	<em class="close"></em>
+    	<div class="tit">
+        	<h2>选择客户</h2>
+            <div class="searchBar">
+            	<input placeholder="输入客户姓名">
+                <button>搜索</button>
+            </div>
+        </div>
+        <div class="list">
+            <ul>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+                <li>李思</li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="btn">确定</a>
+    </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+$(function(){
+	var winH=$(window).height();
+	$(".choosePop .list li").click(function(){
+		$(this).addClass("active").siblings().removeClass("active");
+	})
+	$(".choose").click(function(){
+		$(".choosePop").show();
+		$(".choosePop .list").height(winH-$(".choosePop .tit").height()-240);
+	})
+	$(".choosePop .close").click(function(){
+		$(".choosePop").hide();
+	})
+	$(window).resize(function(){
+		winH=$(window).height();
+		$(".choosePop .list").height(winH-$(".choosePop .tit").height()-240);
+	})
+});
+</script>
+</body>
+</html>

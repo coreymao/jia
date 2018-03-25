@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>家居</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main mySpace">
+	<div class="register mainBox">
+        <div class="top">
+            <div class="img"><img src="img/user.jpg"></div>
+            <p>欢迎注册成为我们的会员！</p>
+        </div>
+        <div class="myInfo">
+            <ul>
+                <li>
+                    <label>姓名：</label>
+                    <input type="text">
+                </li>
+                <li>
+                    <label>手机：</label>
+                    <input type="tel">
+                </li>
+                <li>
+                    <label>性别：</label>
+                    <span class="sex"><em>男</em><em>女</em></span>
+                </li>
+                <li>
+                    <label>职务：</label>
+                    <select>
+                        <option>请选择</option>
+                        <option>销售经理</option>
+                        <option>采购经理</option>
+                        <option>ceo</option>
+                    </select>
+                </li>
+                <li>
+                    <label>店铺码：</label>
+                    <input type="text" style="width:305px;">
+                </li>
+            </ul>
+            <div class="tk">
+                <span class="check"></span>我已阅读并同意<a href="javascript:void(0)">服务条款</a>
+            </div>
+            <a href="javascript:void(0)" class="btn submit"><b>注册</b></a>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+$(function(){
+	$(".sex em").click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+	})
+	$(".submit").click(function(){
+		popup({
+			text:"提交成功！",
+			type:"alert"
+		})
+	})
+	$(".check").click(function(){
+		$(this).toggleClass("on");
+	})
+})
+</script>
+</body>
+</html>

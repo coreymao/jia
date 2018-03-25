@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>家居</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection">
+    <script type="text/javascript">
+		var phoneWidth =  parseInt(window.screen.width);
+		var phoneScale = phoneWidth/640;
+		var ua = navigator.userAgent;
+		if (/Android (\d+\.\d+)/.test(ua)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main">
+	<div class="mainBox">
+		<div class="title">
+        	<h2>渠道详情</h2>
+            <a href="addChannel.html" class="btn">+添加渠道</a>
+        </div>
+        <div class="myInfo info">
+            <ul>
+                <li>
+                    姓名：李思
+                </li>
+                <li>
+                    手机：13812345678
+                </li>
+                <li>
+                    性别：男
+                </li>
+                <li>
+                    职业：音响师
+                </li>
+                <li>
+                    备注：4343432434
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>
